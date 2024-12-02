@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Food Delivery Menu</title>
+</head>
+<body>
+
+    <h1>Welcome to Delicious Eats</h1>
+
+    <!-- Box for the Menu Table -->
+    <div style="border: 2px solid black; padding: 20px; width: 60%; margin: auto;">
+        <!-- Food Delivery Menu Table -->
+        <table border="1" cellpadding="10" cellspacing="0" style="width: 100%;">
+            <caption><strong>Today's Specials</strong></caption>
+            <thead>
+                <tr>
+                    <th>Dish Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>sukuti</td>
+                    <td>Fried meat with green leafy vegetable</td>
+                    <td>Rs.500</td>
+                </tr>
+                <tr>
+                    <td>momo</td>
+                    <td>Juicy jhol chicken,beef momo</td>
+                    <td>Rs.450</td>
+                </tr>
+                <tr>
+                    <td>didho</td>
+                    <td>fresh food of meat and local meal</td>
+                    <td>RS.1500</td>
+                </tr>
+                <tr>
+                    <td>Chicken Wings</td>
+                    <td>Spicy and crispy wings served with ranch dip</td>
+                    <td>Rs.156.00</td>
+                </tr>
+                <tr>
+                    <td>Chatamari</td>
+                    <td>jucy beef meat</td>
+                    <td>Rs.1300</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+
+    <!-- Box for the Order Form -->
+    <div style="border: 2px solid black; padding: 20px; width: 60%; margin: auto;">
+        <!-- Order Form -->
+        <form action="submit_order.php" method="POST">
+            <h2>Place Your Order</h2>
+
+            <!-- Full Name -->
+            <label for="full-name">Full Name:</label><br>
+            <input type="text" id="full-name" name="full-name" required><br><br>
+
+            <!-- Email Address -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone"><br><br>
+
+            <!-- Menu Items (Checkboxes) -->
+            <label for="menu">Select Food Items:</label><br>
+            <input type="checkbox" name="menu-items[]" value="Sukuti"> Sukuti<br>
+            <input type="checkbox" name="menu-items[]" value="momo">momo<br>
+            <input type="checkbox" name="menu-items[]" value="didho"> didho <br>
+            <input type="checkbox" name="menu-items[]" value="Chicken Wings"> Chicken Wings<br>
+            <input type="checkbox" name="menu-items[]" value="Chatamari">Chatamari<br><br>
+
+            <!-- Quantity -->
+            <label for="quantity">Quantity:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+            <!-- Delivery Address -->
+            <label for="address">Delivery Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Place Order">
+        </form>
+    </div>
+
+</body>
+</html>
